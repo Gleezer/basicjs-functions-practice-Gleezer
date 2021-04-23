@@ -13,6 +13,7 @@ console.log("Exercise One"); // Do not modify the lines like this before each ex
 // Write your code here 👇
 
 function getNumberFive() {
+  return 5
   // Your code here
 }
 
@@ -32,8 +33,9 @@ console.log("Exercise Two");
 //
 // Write your code here 👇
 
-function add(a, b) {
-
+function add(a, b) 
+{
+  return a + b
 }
 
 //  -------TESTS---------------------------------------------------------------
@@ -54,9 +56,16 @@ console.log("Exercise Three");
 //
 // Write your code here 👇
 
-function absoluteValue(number) {
-
-
+function absoluteValue(number) 
+{
+  if (number > 0)
+  {
+    return number
+  }
+  else
+  {
+    return number * -1
+  }
 }
 
 //  -------TESTS---------------------------------------------------------------
@@ -77,8 +86,9 @@ console.log("Exercise Four");
 //
 // Write your code here 👇
 
-function concatenate(message, text) {
-
+function concatenate(message, text) 
+{
+ return  message + text
 
 }
 
@@ -98,9 +108,21 @@ console.log("Exercise Five");
 // 
 // Write your code here 👇
 
-function contains(arrayOfNames, name) {
+function contains(arrayOfNames, name) 
+{
 
-
+  for (index = 0; index < arrayOfNames.length; index ++)
+ {
+  // let arrayOfNames = []
+  // let name = arrayOfNames[index]
+  
+    if (arrayOfNames[index] === name)
+    {     
+      return true
+    }
+    
+   }
+   return false
 }
 
 //  -------TESTS---------------------------------------------------------------
@@ -122,9 +144,14 @@ console.log("Exercise Six");
 // 
 // Write your code here 👇
 
-function containsWaldo(arrayOfNames) {
+function containsWaldo(arrayOfNames) 
+{
 
-
+  if (contains(arrayOfNames, 'waldo') === true)
+  {
+    return true
+  }
+return false
 }
 
 //  -------TESTS---------------------------------------------------------------
@@ -144,8 +171,13 @@ console.log("Exercise Seven");
 // 
 // Write your code here 👇
 
-function searchForWaldo(arrayOfNames) {
-
+function searchForWaldo(arrayOfNames) 
+{
+  if (containsWaldo(arrayOfNames, 'waldo') === true)
+  {
+    return "I found waldo!"
+  }
+  return "I couldn't find waldo..."
 
 }
 
